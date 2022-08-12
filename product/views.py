@@ -25,7 +25,7 @@ class ProductView(APIView):
         end = datetime.datetime(days=365).strftime ("%Y%m%d") + datetime.datetime.now().strftime ("%Y%m%d")
         UserProduct.Create(
             user = request.user,
-            Product = product,
+            product = product,
             statr_date = now,
             end_date = end
         )
